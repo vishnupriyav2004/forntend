@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf8">
+        <meta name="viewport",content="width=device_width , initial-scale=1.0">
+        <title>BMI CALCULATOR</title>
+    </head>
+    <style>
+        #heading{
+            background-image:linear-gradient(to right,rgb(67, 197, 226) 40%,rgb(20, 20, 146) 60%)
+        }
+    </style>
+    <script>
+        function reset1(){
+            document.getElementById("height").value = "";
+            document.getElementById("weight").value = "";
+            document.getElementById("BMI").innerHTML = "";
+
+                    }
+                    function submit1()
+                    {
+                    const h=parseFloat(document.getElementById("height").value);
+                    const w=parseFloat(document.getElementById("weight").value);
+                    console.log(w);
+                    console.log(h);
+                    const bmi=w/((h/100)*(h/100))
+                    document.getElementById("BMI").innerHTML=bmi.toFixed(2);
+                    console.log(bmi);
+
+                    }
+
+    </script>
+    <body>
+
+        <center>
+            <h1 id="heading">BMI CALCULATOR</h1>
+            <div style="background-color: blanchedalmond">
+                <br><br><br>
+            <p>Enter Height in "cm" and Weight in "kg"</p>
+            <label >HEIGHT</label>
+            <input type="number" id="height">
+            <label>WEIGHT</label>
+            <input type="number" id="weight"><br><br>
+            <button  onclick="submit1()">submit</button>
+            <button  onclick="reset1()">reset</button><br><br>
+            <label>BMI IS:</label>
+            <textarea  id="BMI" rows="1" cols="40" readonly></textarea><br><br>
+            <h2>BMI  RANGES -kg/m<sup>2</sup>:</h2>
+            <p>
+                    Severe Thinness	< 16 <br>
+                    Moderate Thinness	16 - 17<br>
+                    Mild Thinness	17 - 18.5<br>
+                    Normal	18.5 - 25<br>
+                    Overweight	25 - 30<br>
+                    Obese Class I	30 - 35<br>
+                    Obese Class II	35 - 40<br>
+                    Obese Class III	> 40<br>
+                    <br><br><br>
+            </p>
+            </div>
+
+
+
+        </center>
+    </body>
+</html>
